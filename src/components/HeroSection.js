@@ -132,7 +132,7 @@ const HeroSection = ({ scrollY }) => {
               <div className="image-wrapper">
                 <img 
                   src="/images/Ali1.jpg" 
-                  alt="Ali Abd Al HaMeD - Full Stack Developer" 
+                  alt="Ali" 
                   className="hero-image"
                 />
                 <div className="image-glow"></div>
