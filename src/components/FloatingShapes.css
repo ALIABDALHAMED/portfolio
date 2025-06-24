@@ -1,0 +1,124 @@
+.floating-shapes-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  opacity: 0.1;
+  filter: blur(0.5px);
+  transform-style: preserve-3d;
+  transition: opacity 0.3s ease;
+}
+
+.floating-shape:hover {
+  opacity: 0.3;
+}
+
+/* Cube */
+.floating-shape--cube {
+  background: linear-gradient(45deg, #4A90E2, #357ABD);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.floating-shape--cube::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #4A90E2, #357ABD);
+  transform: translateZ(-10px) rotateY(45deg);
+  opacity: 0.5;
+  border-radius: 2px;
+}
+
+/* Pyramid */
+.floating-shape--pyramid {
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #4A90E2;
+  background: none !important;
+  transform-origin: center bottom;
+}
+
+/* Sphere */
+.floating-shape--sphere {
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #7BB3F0, #4A90E2, #357ABD);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  box-shadow: 
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Torus */
+.floating-shape--torus {
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #4A90E2, #357ABD, #4A90E2);
+  border: 8px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.floating-shape--torus::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  background: #000000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animation enhancements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.floating-shape {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-shape--cube {
+  animation-delay: 0s;
+}
+
+.floating-shape--pyramid {
+  animation-delay: 1.5s;
+}
+
+.floating-shape--sphere {
+  animation-delay: 3s;
+}
+
+.floating-shape--torus {
+  animation-delay: 4.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-shape {
+    opacity: 0.05;
+  }
+  
+  .floating-shape--pyramid {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #4A90E2;
+  }
+}
