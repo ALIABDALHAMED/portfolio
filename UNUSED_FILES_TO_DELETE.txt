@@ -1,0 +1,8 @@
+FloatingShapes.js
+FloatingShapes.css
+ParticleField.js
+ParticleField.css
+DotGrid.js
+DotGrid.css
+
+These files are not imported or used anywhere in your project and can be safely deleted.
