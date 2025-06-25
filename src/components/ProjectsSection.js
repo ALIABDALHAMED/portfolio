@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       id: 1,
       title: 'NetflixClone',
       description: 'This project was made by HTML, CSS, and JS.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600',
+      image: '\images\Screenshot (61).png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       category: 'frontend',
       github: 'https://github.com/ALIABDALHAMED/NetflixClone',
