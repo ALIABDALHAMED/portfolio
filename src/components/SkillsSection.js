@@ -18,10 +18,7 @@ const SkillsSection = () => {
     { name: 'Python', level: 80, icon: '🐍', category: 'Programming' },
     { name: 'CSS/SCSS', level: 92, icon: '🎨', category: 'Frontend' },
     { name: 'MongoDB', level: 78, icon: '🍃', category: 'Database' },
-    { name: 'Docker', level: 75, icon: '🐳', category: 'DevOps' },
     { name: 'Git', level: 88, icon: '🔀', category: 'Tools' },
-    { name: 'AWS', level: 70, icon: '☁️', category: 'Cloud' },
-    { name: 'Network Security', level: 85, icon: '🔒', category: 'Network' },
     { name: 'Linux', level: 82, icon: '🐧', category: 'Systems' }
   ];
 

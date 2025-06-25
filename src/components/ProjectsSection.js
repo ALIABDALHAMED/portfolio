@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       id: 1,
       title: 'NetflixClone',
       description: 'This project was made by HTML, CSS, and JS.',
-      image: '\images\Screenshot (61).png',
+      image: process.env.PUBLIC_URL + '/images/Screenshot (61).png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       category: 'frontend',
       github: 'https://github.com/ALIABDALHAMED/NetflixClone',
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       id: 2,
       title: 'Portfolio',
       description: 'Personal portfolio website showcasing projects and skills.',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600',
+      image: process.env.PUBLIC_URL + '/images/Screenshot (80).png',
       technologies: ['React', 'CSS', 'JavaScript'],
       category: 'frontend',
       github: 'https://github.com/ALIABDALHAMED/portfolio_2',
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
       id: 3,
       title: 'Responsive Login Form',
       description: 'A modern responsive login form built with HTML, CSS, and JS.',
-      image: 'https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=600',
+      image: process.env.PUBLIC_URL + '/images/Screenshot (81).png',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       category: 'frontend',
       github: 'https://github.com/ALIABDALHAMED/responsive-login-form',
@@ -49,11 +49,7 @@ const ProjectsSection = () => {
   const categories = [
     { id: 'all', name: 'All Projects', icon: '🚀' },
     { id: 'fullstack', name: 'Full Stack', icon: '⚡' },
-    { id: 'frontend', name: 'Frontend', icon: '🎨' },
-    { id: 'security', name: 'Security', icon: '🔒' },
-    { id: 'devops', name: 'DevOps', icon: '🔧' },
-    { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
-    { id: 'mobile', name: 'Mobile', icon: '📱' }
+    { id: 'frontend', name: 'Frontend', icon: '🎨' }
   ];
 
   useEffect(() => {
