@@ -131,7 +131,7 @@ const HeroSection = ({ scrollY }) => {
               <div className="image-backdrop"></div>
               <div className="image-wrapper">
                 <img 
-                  src="/images/Ali1.jpg" 
+                  src={process.env.PUBLIC_URL + "/images/Ali1.jpg"} 
                   alt="Ali" 
                   className="hero-image"
                 />
